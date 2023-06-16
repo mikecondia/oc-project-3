@@ -57,11 +57,9 @@ header h1{
   background-color: #f6f6f6;
   height: 287px;
   margin:0;
-
 }
 nav {
   background-color: #ffffff;
-  height: 400px;
   margin: 0; 
 }
 .button_container{
@@ -83,11 +81,11 @@ button{
   filter: drop-shadow(10px 7px 5px #c6c6c6);
 }
 .how_it_works_container{
-  height:370px;
   display:flex;
   flex-wrap: wrap;
   align-items:center;
   justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
 }
 .create_menu_card:hover, .choose_restaurant_card:hover, .go_enjoy_card:hover{
@@ -118,14 +116,17 @@ h4{
   position:absolute;
   right:270px
 }
-.choose_restaurant_card{
-  grid-template-columns: 20px 100px;
+.cellphone_icon:hover::before, .bars_icon:hover::before, .store_icon:hover::before{
+  color:#9356dc;
+}
+.choose_restaurant_card, .create_menu_card, .go_enjoy_card{
   background-color: #f6f6f6;
   width:322px;
   height:70px;
   border-radius: 20px;
   position:relative;
   filter: drop-shadow(0px 5px 4px #c6c6c6);
+  margin-bottom:30px;
 }
 .bars_icon::before{
   font-family: FontAwesome;
@@ -136,14 +137,7 @@ h4{
   right:270px;
   top: 20px;
 }
-.create_menu_card{
-  background-color: #f6f6f6;
-  width:322px;
-  height:70px;
-  border-radius: 20px;
-  position:relative;
-  filter: drop-shadow(0px 5px 4px #c6c6c6);
-}
+
 .store_icon::before{
   font-family: FontAwesome;
   content: "\f54e";
@@ -152,15 +146,6 @@ h4{
   position:absolute;
   right:270px;
   top:20px;
-}
-.go_enjoy_card{
-  background-color: #f6f6f6;
-  width:322px;
-  height:70px;
-  border-radius: 20px;
-  position:relative;
-  filter: drop-shadow(0px 5px 4px #c6c6c6);
-  margin-bottom:67px;
 }
 .new_tab{
   background-color: #99e2d0;
@@ -178,8 +163,9 @@ h4{
 }
 main {
   background-color:#f6f6f6;
-  height: 1280px;
   margin: 0; 
+  padding-left:4vw;
+  padding-right:4vw;
 }
 main h2{
   padding-top:59px;
@@ -195,10 +181,6 @@ main p{
   margin-top: 0px;
 }
 #restaurants_container{
-  display:flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content:center;
   margin: 0 auto;
 }
 .fa-regular{
@@ -222,67 +204,18 @@ main p{
   background-clip: text;
   -webkit-background-clip: text;
 } 
-.full_palette_card{
-  margin-top: ;
+.full_palette_card, .enchanted_plate_card, .bastille_card, .gourmand_card{
   height:250px;
-  width:355px;
+  width:100%;
   border-radius: 20px;
   background-color: #ffffff;
   filter: drop-shadow(10px 6px 4px #c6c6c6);
   margin-bottom:18px;
   position: relative;
 }
-.full_palette_card img{
+.full_palette_card img, .enchanted_plate_card img, .bastille_card img, .gourmand_card img{
   object-fit: cover;
-  width:355px;
-  height: 174px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-.enchanted_plate_card{
-  height:250px;
-  width:355px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  filter: drop-shadow(10px 6px 4px #c6c6c6);
-  margin-bottom:18px;
-  position: relative;
-}
-.enchanted_plate_card img{
-  object-fit: cover;
-  width:355px;
-  height: 174px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-.bastille_card{
-  height:250px;
-  width:355px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  filter: drop-shadow(10px 6px 4px #c6c6c6);
-  margin-bottom:18px;
-  position: relative;
-}
-.bastille_card img{
-  object-fit: cover;
-  width:355px;
-  height: 174px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-.gourmand_card{
-  height:250px;
-  width:355px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  filter: drop-shadow(10px 6px 4px #c6c6c6);
-  margin-bottom:18px;
-  position: relative;
-}
-.gourmand_card img{
-  object-fit: cover;
-  width:355px;
+  width:100%;
   height: 174px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -294,7 +227,6 @@ footer {
 }
 .footer_logo{
   width:25%;
-  display: flex;
   margin-left:10%;
   padding-top:20px;
 }
@@ -303,10 +235,7 @@ footer ul{
   color:#ffffff;
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
-  width:70%;
-  height:50%;
- 
+  
 }
 li.fork_spoon_icon::before {
   font-family: FontAwesome;
@@ -316,5 +245,197 @@ li.handshake_icon::before{
   font-family: FontAwesome;
   content: "\f4c4";
 }
+li{
+  margin-bottom:10px;
+}
+
+/** Tablet View **/ 
+@media only screen and (min-width:600px){
+  .footer_logo{
+    padding-top:40px;
+    margin-left:40%;
+    padding-bottom:25px;
+    }
+  footer ul{
+   flex-direction: row;
+   width:80%;
+   justify-content: space-between;
+  }
+  
+}
+@media only screen and (min-width:481px) and (max-width:999px){
+
+  .badge{
+    top:45px;
+  }
+ .how_it_works_container{
+  padding-left:10vw;
+  padding-right:10vw;
+ }
+  h4{
+    margin-left:40%;
+    font-size:20px;
+    padding-right:10px;
+    padding-top:20px;
+  }
+  .choose_restaurant_card, .create_menu_card, .go_enjoy_card{
+    width:100%;
+    height:110px;
+    margin-bottom:30px;
+  }
+  .cellphone_icon::before, .bars_icon::before, .store_icon::before{
+    left:20%;
+    font-size:40px;
+    padding-top: 10px;
+  }
+  .fa-solid, .fa-regular{
+    font-size:35px;
+  }
+  .full_palette_card, .enchanted_plate_card, .bastille_card, .gourmand_card{
+    height:445px;
+    width:100%;
+    border-radius: 20px;
+    background-color: #ffffff;
+    filter: drop-shadow(10px 6px 4px #c6c6c6);
+    margin-bottom:18px;
+    position: relative;
+  }
+  .full_palette_card img, .enchanted_plate_card img, .bastille_card img, .gourmand_card img{
+    object-fit: cover;
+    width:100%;
+    height: 330px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+  main h3{
+    font-size:25px;
+    margin-top: 20px;;
+  }
+  main p{
+    font-size:20px;
+    margin-top: 10px;
+  }
+  .new_tab{
+  width:120px;
+  height:45px;
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:25px;
+  }
+
+}
+@media only screen and (min-width:1000px){
+ 
+  section{
+  display:grid;
+  grid-template-areas: 
+      "a b";
+  }
+    .book_menu{
+      grid-area:a;
+      background-color: #ffffff;
+      height: 100%;
+      width:30em;
+    } 
+    .how_it_works_container{
+      grid-area:b;
+      flex-direction: row;
+    }
+    nav h2{
+      padding-left:25%;
+    }
+    
+    .full_palette_card, .enchanted_plate_card, .bastille_card, .gourmand_card{
+      height:325px;
+      width:325px;
+      border-radius: 20px;
+      background-color: #ffffff;
+      filter: drop-shadow(10px 6px 4px #c6c6c6);
+      margin-bottom:18px;
+      position: relative;
+      margin:10px;
+    }
+    .full_palette_card img, .enchanted_plate_card img, .bastille_card img, .gourmand_card img{
+      object-fit: cover;
+      width:325px;
+      height: 250px;
+      justify-content: space-between;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+    #restaurants_container{
+      display:flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width:100%;
+      padding-bottom:40px;
+    }
+    main{
+      width:100%;
+      height:100%;
+      margin:0;
+      padding-left:0px;
+      padding-right:0;
+    }
+    main h2{
+      
+    }
+  
+}
+@media only screen and (min-width:1124px){
+  .choose_restaurant_card, .create_menu_card, .go_enjoy_card{
+    margin-right:30px;
+  }
+}
+@media only screen and (min-width:1035px)and (max-width:1379px){
+    main h2{
+      padding-left:10%;
+    }
+  #restaurants_container{
+      width:1050px;
+    }
+    .full_palette_card, .enchanted_plate_card, .bastille_card, .gourmand_card{
+     margin:30px;
+     width:400px;
+     height:400px;
+    }
+    .full_palette_card img, .enchanted_plate_card img, .bastille_card img, .gourmand_card img{
+        width:400px;
+        height:300px;
+      }
+    }
+@media only screen and (min-width:1380px){
+  .choose_restaurant_card, .create_menu_card, .go_enjoy_card{
+    width:260px;
+    margin-top:22px;
+  }
+  .cellphone_icon::before{
+    right:207px;
+  }
+  .bars_icon::before{
+    right:207px;
+    top:24px;
+  }
+  .store_icon::before{
+    right:207px;
+    top:25px;
+  }
+  .full_palette_card, .enchanted_plate_card, .bastille_card, .gourmand_card{
+    margin-bottom:40px;
+   }
+   main h2{
+    padding-top:20px;
+   }
+   .how_it_works_container{
+    flex-direction: row;
+    flex-wrap: nowrap;
+   }
+  
+}
+
+
 
 /*# sourceMappingURL=style.css.map */
