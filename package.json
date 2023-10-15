@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/enchanted_plate.scss:./css/enchanted_plate.css --style expanded",
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded",
     "prefix":"postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
    },
   "author": "",

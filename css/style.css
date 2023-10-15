@@ -8,8 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f6f6f6;
- 
+  background: #f6f6f6;
   animation: visible forwards 3s;
 }
 
@@ -140,6 +139,12 @@ button {
   height: 50px;
   border-radius: 30px;
   filter: drop-shadow(10px 7px 5px #c6c6c6);
+  transition: all 0.4s ease;
+}
+
+button:hover {
+  background-image: linear-gradient(#ee8cdd 40%, #ba79f3);
+  filter: drop-shadow(20px 14px 10px #747373);
 }
 
 .how_it_works_container {
@@ -333,6 +338,10 @@ li.handshake_icon::before {
 
 li {
   margin-bottom: 10px;
+}
+
+.contact {
+  color: #ffffff;
 }
 
 /** Tablet View **/

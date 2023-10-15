@@ -10,7 +10,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    background-color: $color-primary; 
+    background:$color-primary;
     animation: visible forwards 3s;
   }
   @keyframes visible {
@@ -32,14 +32,14 @@
   }
   @keyframes slider {
     0% {
-      background-color:$color-primary;
+      background-color:#f6f6f6;
       
     }
     50%{
       background-color: black;
     }
     100% {
-      background-color:$color-primary;
+      background-color:#f6f6f6;
       
       visibility: hidden;
     }
@@ -67,7 +67,7 @@
   
   .heading_drop_shadow {
     filter: drop-shadow(0px 5px 4px #c6c6c6);
-    background-color: $color-secondary;
+    background-color: #ffffff;
     height: 64px;
   }
   
@@ -112,13 +112,13 @@
   }
   
   .book_menu {
-    background-color: $color-primary;
+    background-color: #f6f6f6;
     height: 287px;
     margin: 0;
   }
   
   nav {
-    background-color:$color-secondary;
+    background-color: #ffffff;
     margin: 0;
   }
   
@@ -130,7 +130,7 @@
   }
   
   button {
-    color: $color-secondary;
+    color: #ffffff;
     font-weight: 400;
     font-size: 1rem;
     letter-spacing: 0.6px;
@@ -140,8 +140,12 @@
     height: 50px;
     border-radius: 30px;
     filter: drop-shadow(10px 7px 5px #c6c6c6);
+    transition: all .4s ease;
   }
-  
+  button:hover{
+    background-image: linear-gradient(#ee8cdd 40%, #ba79f3);
+    filter:drop-shadow(20px 14px 10px #747373);
+  }
   .how_it_works_container {
     display: flex;
     flex-wrap: wrap;
@@ -168,7 +172,7 @@
   .badge {
     padding: 5px 10px;
     background-color: #9356dc;
-    color: $color-primary;
+    color: #f6f6f6;
     border-radius: 50%;
     position: absolute;
     top: 20px;
@@ -189,7 +193,7 @@
   }
   
   .choose_restaurant_card, .create_menu_card, .go_enjoy_card {
-    background-color:$color-primary;
+    background-color: #f6f6f6;
     width: 322px;
     height: 70px;
     border-radius: 20px;
@@ -234,7 +238,7 @@
   }
   
   main {
-    background-color: $color-primary;
+    background-color: #f6f6f6;
     margin: 0;
     padding-left: 4vw;
     padding-right: 4vw;
@@ -288,7 +292,7 @@
     height: 250px;
     width: 100%;
     border-radius: 20px;
-    background-color: $color-secondary;
+    background-color: #ffffff;
     filter: drop-shadow(10px 6px 4px #c6c6c6);
     margin-bottom: 18px;
     position: relative;
@@ -316,7 +320,7 @@
   
   footer ul {
     list-style: none;
-    color: $color-secondary;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
   }
@@ -334,7 +338,9 @@
   li {
     margin-bottom: 10px;
   }
-  
+  .contact{
+    color:#ffffff;
+  }
   /** Tablet View **/
   @media only screen and (min-width: 600px) {
     .footer_logo {
@@ -379,7 +385,7 @@
       height: 445px;
       width: 100%;
       border-radius: 20px;
-      background-color: $color-secondary;
+      background-color: #ffffff;
       filter: drop-shadow(10px 6px 4px #c6c6c6);
       margin-bottom: 18px;
       position: relative;
@@ -415,7 +421,7 @@
     }
     .book_menu {
       grid-area: a;
-      background-color: $color-secondary;
+      background-color: #ffffff;
       height: 100%;
       width: 30em;
     }
@@ -430,7 +436,7 @@
       height: 325px;
       width: 325px;
       border-radius: 20px;
-      background-color: $color-secondary;
+      background-color: #ffffff;
       filter: drop-shadow(10px 6px 4px #c6c6c6);
       margin-bottom: 18px;
       position: relative;
