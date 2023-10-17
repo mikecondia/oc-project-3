@@ -1,0 +1,27 @@
+@mixin primary-font{
+    font-family:"Roboto";
+}
+@mixin secondary-font{
+    font-family:"Shrikhand";
+}
+
+@mixin button-hover{
+    background-image: linear-gradient(#ee8cdd 40%, #ba79f3);
+  filter:drop-shadow(20px 14px 10px #747373);
+}
+
+@mixin long-shadow{
+    filter:drop-shadow(10px 6px 4px $shadow);
+}
+
+@mixin short-shadow {
+    filter: drop-shadow(0px 5px 4px $shadow);
+}
+@mixin underline {
+  background-color:$focus; 
+  height: 5px;
+  position:absolute;
+  width:70px;
+  margin-top:3px;
+  margin-left:10px;
+}
