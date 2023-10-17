@@ -1,4 +1,5 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 
 #loader{
     position:fixed;
@@ -32,30 +33,30 @@
   }
   @keyframes slider {
     0% {
-      background-color:#f6f6f6;
+      background-color:$color-primary;
       
     }
     50%{
       background-color: black;
     }
     100% {
-      background-color:#f6f6f6;
+      background-color:$color-primary;
       
       visibility: hidden;
     }
   }
   body {
-    font-family: "Roboto";
+    @include primary-font;
     margin: 0;
     width: 100%;
   }
   
   a:link {
     text-decoration: none;
-    color: #353535;
+    color: $text-footer;
   }
   a:active{
-    color:#353535;
+    color:$text-footer;
   }
   
   .logo {
@@ -66,8 +67,8 @@
   }
   
   .heading_drop_shadow {
-    filter: drop-shadow(0px 5px 4px #c6c6c6);
-    background-color: #ffffff;
+    @include short-shadow;
+    background-color:$color-secondary;
     height: 64px;
   }
   
@@ -80,7 +81,7 @@
   .location::before {
     font-family: FontAwesome;
     content: "\f3c5";
-    color: #353535;
+    color: $text-footer;
     margin-right: 18px;
   }
   
@@ -112,13 +113,13 @@
   }
   
   .book_menu {
-    background-color: #f6f6f6;
+    background-color:$color-primary;
     height: 287px;
     margin: 0;
   }
   
   nav {
-    background-color: #ffffff;
+    background-color:$color-secondary;
     margin: 0;
   }
   
@@ -130,21 +131,20 @@
   }
   
   button {
-    color: #ffffff;
+    color: $color-secondary;
     font-weight: 400;
     font-size: 1rem;
     letter-spacing: 0.6px;
-    background-image: linear-gradient(#ee73da 40%, #9e59dc);
+    background-image: $gradient-primary;
     border: none;
     width: 217px;
     height: 50px;
     border-radius: 30px;
-    filter: drop-shadow(10px 7px 5px #c6c6c6);
+    @include long-shadow;
     transition: all .4s ease;
   }
   button:hover{
-    background-image: linear-gradient(#ee8cdd 40%, #ba79f3);
-    filter:drop-shadow(20px 14px 10px #747373);
+   @include button-hover;
   }
   .how_it_works_container {
     display: flex;
@@ -156,7 +156,7 @@
   }
   
   .create_menu_card:hover, .choose_restaurant_card:hover, .go_enjoy_card:hover {
-    background-color: #f5edff;
+    background-color: $hover-main;
     transition: 0.2s;
   }
   
@@ -171,8 +171,8 @@
   
   .badge {
     padding: 5px 10px;
-    background-color: #9356dc;
-    color: #f6f6f6;
+    background-color: $badge;
+    color: $color-primary;
     border-radius: 50%;
     position: absolute;
     top: 20px;
@@ -182,30 +182,30 @@
   .cellphone_icon::before {
     font-family: FontAwesome;
     content: "\f3cd";
-    color: #7e7e7e;
+    color: $icon-color;
     font-size: 20px;
     position: absolute;
     right: 270px;
   }
   
   .cellphone_icon:hover::before, .bars_icon:hover::before, .store_icon:hover::before {
-    color: #9356dc;
+    color: $badge;
   }
   
   .choose_restaurant_card, .create_menu_card, .go_enjoy_card {
-    background-color: #f6f6f6;
+    background-color:$color-primary;
     width: 322px;
     height: 70px;
     border-radius: 20px;
     position: relative;
-    filter: drop-shadow(0px 5px 4px #c6c6c6);
+    @include short-shadow;
     margin-bottom: 30px;
   }
   
   .bars_icon::before {
     font-family: FontAwesome;
     content: "\f0c9";
-    color: #7e7e7e;
+    color: $icon-color;
     font-size: 20px;
     position: absolute;
     right: 270px;
@@ -215,7 +215,7 @@
   .store_icon::before {
     font-family: FontAwesome;
     content: "\f54e";
-    color: #7e7e7e;
+    color: $icon-color;
     font-size: 20px;
     position: absolute;
     right: 270px;
@@ -223,7 +223,7 @@
   }
   
   .new_tab {
-    background-color: #99e2d0;
+    background-color: $focus;
     width: 80px;
     height: 29px;
     position: absolute;
@@ -238,7 +238,7 @@
   }
   
   main {
-    background-color: #f6f6f6;
+    background-color:$color-primary;
     margin: 0;
     padding-left: 4vw;
     padding-right: 4vw;
@@ -282,7 +282,7 @@
   }
   
   .fa-solid:hover {
-    background: linear-gradient(#ee73da 40%, #9e59dc);
+    background: $gradient-primary;
     background-clip: border-box;
     background-clip: text;
     -webkit-background-clip: text;
@@ -292,8 +292,8 @@
     height: 250px;
     width: 100%;
     border-radius: 20px;
-    background-color: #ffffff;
-    filter: drop-shadow(10px 6px 4px #c6c6c6);
+    background-color: $color-secondary;
+    @include long-shadow;
     margin-bottom: 18px;
     position: relative;
   }
@@ -307,7 +307,7 @@
   }
   
   footer {
-    background-color: #353535;
+    background-color:$text-footer;
     height: 198px;
     margin: 0;
   }
@@ -320,7 +320,7 @@
   
   footer ul {
     list-style: none;
-    color: #ffffff;
+    color:$color-secondary;
     display: flex;
     flex-direction: column;
   }
@@ -339,7 +339,7 @@
     margin-bottom: 10px;
   }
   .contact{
-    color:#ffffff;
+    color:$color-secondary;
   }
   /** Tablet View **/
   @media only screen and (min-width: 600px) {
@@ -385,8 +385,8 @@
       height: 445px;
       width: 100%;
       border-radius: 20px;
-      background-color: #ffffff;
-      filter: drop-shadow(10px 6px 4px #c6c6c6);
+      background-color:$color-secondary;
+      @include long-shadow;
       margin-bottom: 18px;
       position: relative;
     }
@@ -421,7 +421,7 @@
     }
     .book_menu {
       grid-area: a;
-      background-color: #ffffff;
+      background-color:$color-secondary;
       height: 100%;
       width: 30em;
     }
@@ -436,8 +436,8 @@
       height: 325px;
       width: 325px;
       border-radius: 20px;
-      background-color: #ffffff;
-      filter: drop-shadow(10px 6px 4px #c6c6c6);
+      background-color: $color-secondary;
+      @include long-shadow;
       margin-bottom: 18px;
       position: relative;
       margin: 10px;

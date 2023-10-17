@@ -50,11 +50,11 @@ body {
 
 a:link {
   text-decoration: none;
-  color: #353535;
+  color: red;
 }
 
 a:active {
-  color: #353535;
+  color: red;
 }
 
 .logo {
@@ -79,7 +79,7 @@ a:active {
 .location::before {
   font-family: FontAwesome;
   content: "\f3c5";
-  color: #353535;
+  color: red;
   margin-right: 18px;
 }
 
@@ -308,7 +308,7 @@ main p {
 }
 
 footer {
-  background-color: #353535;
+  background-color: red;
   height: 198px;
   margin: 0;
 }
@@ -520,4 +520,4 @@ li {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
