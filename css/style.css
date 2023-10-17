@@ -50,7 +50,9 @@ body {
 
 a:link {
   text-decoration: none;
-  color: #353535;
+  /*
+  color: $text-footer;
+  */
 }
 
 a:active {
@@ -128,7 +130,7 @@ nav {
   margin-top: 30px;
 }
 
-button {
+.button {
   color: #ffffff;
   font-weight: 400;
   font-size: 1rem;
@@ -140,9 +142,12 @@ button {
   border-radius: 30px;
   filter: drop-shadow(10px 6px 4px #c6c6c6);
   transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button:hover {
+.button:hover {
   background-image: linear-gradient(#ee8cdd 40%, #ba79f3);
   filter: drop-shadow(20px 14px 10px #747373);
 }

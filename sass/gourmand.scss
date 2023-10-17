@@ -8,7 +8,6 @@ body {
   }
   a:link {
     text-decoration: none;
-    color: $text-footer;
   }
   a:active{
     color:$text-footer;
@@ -259,7 +258,7 @@ b{
   align-items: center;
   margin-top: 30px;
 }
-button {
+.button {
   color: $color-secondary;
   font-weight: 400;
   font-size: 1rem;
@@ -273,8 +272,11 @@ button {
   margin-top:30px;
   margin-bottom:50px;
   transition: all .4s ease;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
-button:hover{
+.button:hover{
   @include button-hover;
 }
 .contact{
