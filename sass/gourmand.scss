@@ -212,6 +212,9 @@ b{
   color: $color-secondary;
   font-size:30px;
 }
+ .chicken .fa-circle-check{
+  margin-top:18px;
+} 
 
 .fa-circle-check{
  height:68px;
@@ -337,6 +340,9 @@ footer {
   .roast-chicken{
     font-size:30px;
   }
+  .chicken .fa-circle-check{
+    margin-top:18px;
+  }
   h4{
     font-size:23px;
     text-overflow: ellipsis;
@@ -360,7 +366,7 @@ footer {
   @media only screen and (min-width:1140px){
     .grid_container{
       display:grid;
-      grid-template-areas: "a b c";
+      grid-template-areas: "1fr 1fr 1fr";
     }
     .transparent-heart {
       right: 30%;
@@ -371,12 +377,16 @@ footer {
     .fa-circle-check{
       height:68px;
     }
+    .chicken .fa-circle-check{
+      margin-top:18px;
+    }
     .card-4{
       height:100px; 
     }
     .roast-chicken{
       font-size:18px;
     }
+    /*
     .column_1{
       grid-area:"a";
     }
@@ -385,7 +395,7 @@ footer {
     }
     .column_3{
       grid-area:"c";
-    }
+    }*/
     h1{
       padding-left:40%;
     }
