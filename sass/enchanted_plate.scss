@@ -372,7 +372,7 @@ footer {
   @media only screen and (min-width:1140px){
     .grid_container{
       display:grid;
-      grid-template-areas: "a b c";
+      grid-template-areas: "1fr 1fr 1fr";
     }
     .transparent-heart {
       right: 20%;
@@ -382,15 +382,6 @@ footer {
     }
     .fa-circle-check{
       height:68px;
-    }
-    .column_1{
-      grid-area:"a";
-    }
-    .column_2{
-      grid-area:"b";
-    }
-    .column_3{
-      grid-area:"c";
     }
     h1{
       padding-left:40%;
