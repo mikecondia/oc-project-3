@@ -99,7 +99,7 @@ h2 {
   font-weight: 100;
   position: relative;
   margin-bottom: 2px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 h3 {
@@ -132,7 +132,9 @@ h4 {
   display: flex;
   height: 68px;
   width: 349px;
-  margin-top: 20px;
+  /*
+  margin-top:20px;
+  */
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -144,48 +146,53 @@ h4 {
 
 .card-1 {
   animation-name: fade;
-  animation-duration: 1s;
+  animation-duration: 600ms;
+  margin-top: 40px;
 }
 
 .card-2 {
   animation-name: fade;
-  animation-duration: 2s;
+  animation-duration: 900ms;
 }
 
 .card-3 {
   animation-name: fade;
-  animation-duration: 3s;
+  animation-duration: 1200ms;
+  margin-bottom: 40px;
 }
 
 .card-4 {
   animation-name: fade;
-  animation-duration: 4s;
+  animation-duration: 1500ms;
   height: 100%;
+  margin-top: 40px;
 }
 
 .card-5 {
   animation-name: fade;
-  animation-duration: 5s;
+  animation-duration: 1800ms;
 }
 
 .card-6 {
   animation-name: fade;
-  animation-duration: 6s;
+  animation-duration: 2100ms;
+  margin-bottom: 40px;
 }
 
 .card-7 {
   animation-name: fade;
-  animation-duration: 7s;
+  animation-duration: 2400ms;
+  margin-top: 40px;
 }
 
 .card-8 {
   animation-name: fade;
-  animation-duration: 8s;
+  animation-duration: 2700ms;
 }
 
 .card-9 {
   animation-name: fade;
-  animation-duration: 9s;
+  animation-duration: 3000ms;
 }
 
 @keyframes fade {
@@ -276,7 +283,7 @@ b {
   position: absolute;
   width: 70px;
   margin-top: 3px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .button_container {
