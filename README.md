@@ -4,4 +4,4 @@ Oh My Food project is the third project in the web-development program through *
 - SASS
 - CSS Animations
 - Command Line
-- Git/Gihub
+- Git/GitHub
