@@ -5,3 +5,6 @@ Oh My Food project is the third project in the web-development program through *
 - CSS Animations
 - Command Line
 - Git/GitHub
+
+## GitHub Pages Project 
+[Oh My Food Project](https://mikecondia.github.io/oc-project-3/index.html)
